@@ -1,3 +1,5 @@
+"use client";
+
 import { Key } from "react";
 import { SummaryCard } from "./SummaryCard";
 import React, { useEffect, useState } from "react";
@@ -8,7 +10,7 @@ export function InfiniteFeed({ initialFeed }: { initialFeed: string[][] }) {
   const [feed, setFeed] = useState<string[][]>(initialFeed);
   const [ref, inView] = useInView();
 
-  async function loadMoreMovies() {
+  async function loadMorePosts() {
     const newFeed = await loadPosts();
     if (newFeed?.length) {
       setFeed((prevFeed) => [...prevFeed, ...newFeed]);
@@ -17,7 +19,7 @@ export function InfiniteFeed({ initialFeed }: { initialFeed: string[][] }) {
 
   useEffect(() => {
     if (inView) {
-      loadMoreMovies();
+      loadMorePosts();
     }
   }, [inView]);
 
