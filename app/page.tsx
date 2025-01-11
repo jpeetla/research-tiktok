@@ -1,5 +1,3 @@
-"use client";
-
 import { getServerSession } from "next-auth";
 import { GoogleSignIn } from "../components/GoogleSignIn";
 import { authConfig } from "../utils/auth";

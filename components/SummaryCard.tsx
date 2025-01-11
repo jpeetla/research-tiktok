@@ -9,7 +9,7 @@ export function SummaryCard({
 }) {
   return (
     <div className="w-screen h-screen flex justify-center items-center bg-gray-100">
-      <div className="w-3/4 max-w-3xl mx-auto my-4 p-8 bg-white border border-gray-200 rounded-lg shadow-lg">
+      <div className="w-3/4 max-w-3xl mx-auto my-4 p-8 bg-white border border-gray-200 rounded-3xl shadow-lg">
         <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
           {title}
         </h1>
