@@ -16,11 +16,3 @@ export async function logInIsRequiredServer() {
   const session = await getServerSession(authConfig);
   if (!session) return redirect("/");
 }
-
-// export async function logInIsRequiredClient() {
-//   if (typeof window === "undefined") {
-//     const session = useSession();
-//     const router = useRouter();
-//     if (!session) router.push("/");
-//   }
-// }
